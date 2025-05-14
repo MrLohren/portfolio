@@ -1,25 +1,25 @@
-
 :root {
-    --rojo : #500001;
-    --blanco : #FCFAF9;
-    --azul : #1B2A41;
-    --morado : #5e58b4;
+  --rojo: #500001;
+  --blanco: #FCFAF9;
+  --azul: #1B2A41;
+  --morado: #5e58b4;
 }
 
 h1 {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-body, p {
+body,
+p {
   font-family: 'Inter', sans-serif;
 }
 
 .div-header {
-    background-color: red;
-    height: 350px;
-    position: relative;
+  background-color: red;
+  height: 350px;
+  position: relative;
 
-    border-bottom: 5px solid var(--rojo);
+  border-bottom: 5px solid var(--rojo);
 }
 
 .div-profilepic {
@@ -30,7 +30,22 @@ body, p {
   bottom: -100px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 50%; 
+  border-radius: 50%;
 
   border: 5px solid var(--rojo);
+}
+
+.div-personal_info {
+  background-color: #1B2A41;
+  margin-top: 101px;
+  height: 20px;
+}
+
+.div-tecnologias {
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-tech {
+  height: 12vh;
 }

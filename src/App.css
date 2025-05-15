@@ -1,5 +1,7 @@
 :root {
   --rojo: #500001;
+  --rojo-transparente: rgba(80, 0, 1, 0.2);
+  --rojo2: #8c2a2c;
   --blanco: #FCFAF9;
   --azul: #1B2A41;
   --morado: #5e58b4;
@@ -7,24 +9,31 @@
 
 h1 {
   font-family: 'IBM Plex Mono', monospace;
+  margin: 0;
 }
 
 body,
-p {
+p,
+h2 {
   font-family: 'Inter', sans-serif;
+  margin: 0;
 }
 
 .div-header {
-  background-color: red;
   height: 350px;
   position: relative;
 
   border-bottom: 5px solid var(--rojo);
+
+  background: linear-gradient(to top,
+      var(--rojo) 0%,
+      var(--rojo-transparente) 25%,
+      var(--blanco) 40%,
+      var(--blanco) 100%);
 }
 
 .div-profilepic {
   position: absolute;
-  background-color: black;
   width: 200px;
   height: 200px;
   bottom: -100px;
@@ -33,11 +42,15 @@ p {
   border-radius: 50%;
 
   border: 5px solid var(--rojo);
+
+  background-image: url('./assets/foto.jpg');
+  background-size: 106%;
+  background-position: 50% 48%;
 }
 
 .div-personal_info {
-  background-color: #1B2A41;
-  margin-top: 101px;
+  background-color: var(--rojo);
+  padding-top: 101px;
   height: 20px;
 }
 
@@ -48,4 +61,107 @@ p {
 
 .img-tech {
   height: 12vh;
+}
+
+.img-foto {
+  width: 20px;
+}
+
+.wave-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.wave-container span {
+  position: relative;
+
+  background-color: var(--rojo);
+
+  width: 15px;
+  height: 15px;
+
+  box-shadow: 0 0 10px var(--rojo), 0 0 20px var(--rojo);
+
+  border-radius: 50%;
+
+  margin: 0 1px;
+
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+@keyframes animate {
+
+  0% {
+    top: 100%
+  }
+
+  50% {
+    opacity: .4;
+  }
+
+  100% {
+    top: 0%;
+    transform: scale(0.15);
+    opacity: 0;
+  }
+
+}
+
+.div-title {
+  width: 100%;
+  text-align: center;
+
+  position: absolute;
+  top: 75px;
+}
+
+.div-title h2 {
+  display: inline-block;
+}
+
+.cursor {
+  border-right: 1px solid black;
+  animation: blinking 1s steps(1, end) infinite;
+  overflow: hidden;
+  z-index: 3;
+  white-space: nowrap;
+}
+
+.typing {
+  animation: typing 3.5s steps(70, end)
+}
+
+@keyframes blinking {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes deleting {
+  from {
+    width: 100%
+  }
+
+  to {
+    width: 0
+  }
 }

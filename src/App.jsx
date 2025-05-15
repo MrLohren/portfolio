@@ -18,13 +18,13 @@ function App() {
       <div className='div-personal_info'>
       </div>
 
-      <div className='div-tecnologias'>
+      {/* <div className='div-tecnologias'>
         <img className='img-tech' src={python_logo} alt="python_logo" />
         <img className='img-tech' src={pytorch_logo} alt="pytorch_logo" />
         <img className='img-tech' src={react_logo} alt="react_logo" />
         <img className='img-tech' src={psql_logo} alt="psql_logo" />
         <img className='img-tech' src={odoo_logo} alt="odoo_logo" />
-      </div>
+      </div> */}
 
       {/* un Project por cada proyecto hecho */}
       <Project />

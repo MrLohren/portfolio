@@ -16,18 +16,15 @@ function App() {
       <Header />
 
       <div className='div-personal_info'>
+        <button className='normal'>Datos académicos</button>
+        <button className='normal'>Redes sociales</button>
+        <button className='playground'><span>Playground</span></button>
       </div>
 
-      {/* <div className='div-tecnologias'>
-        <img className='img-tech' src={python_logo} alt="python_logo" />
-        <img className='img-tech' src={pytorch_logo} alt="pytorch_logo" />
-        <img className='img-tech' src={react_logo} alt="react_logo" />
-        <img className='img-tech' src={psql_logo} alt="psql_logo" />
-        <img className='img-tech' src={odoo_logo} alt="odoo_logo" />
-      </div> */}
-
-      {/* un Project por cada proyecto hecho */}
-      <Project />
+      <div className='div-projects'>
+        <h2>Proyectos Hechos</h2>
+        <Project />
+      </div>
     </>
   )
 }

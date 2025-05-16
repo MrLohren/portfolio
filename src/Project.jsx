@@ -1,7 +1,8 @@
-const Project = ({inverted = 0}) => {
+const Project = ({ inverted = 0 }) => {
     return (
-    <>
-    </>
+        <>
+            test
+        </>
     )
 }
 

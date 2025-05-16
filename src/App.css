@@ -1,6 +1,6 @@
 :root {
   --rojo: #500001;
-  --rojo-transparente: rgba(80, 0, 1, 0.2);
+  --azul-transparente: rgba(27, 42, 65, 0.2);
   --rojo2: #8c2a2c;
   --blanco: #FCFAF9;
   --azul: #1B2A41;
@@ -23,11 +23,11 @@ h2 {
   height: 350px;
   position: relative;
 
-  border-bottom: 5px solid var(--rojo);
+  border-bottom: 5px solid var(--azul);
 
   background: linear-gradient(to top,
-      var(--rojo) 0%,
-      var(--rojo-transparente) 25%,
+      var(--azul) 0%,
+      var(--azul-transparente) 25%,
       var(--blanco) 40%,
       var(--blanco) 100%);
 }
@@ -41,15 +41,16 @@ h2 {
   transform: translateX(-50%);
   border-radius: 50%;
 
-  border: 5px solid var(--rojo);
+  border: 5px solid var(--azul);
 
   background-image: url('./assets/foto.jpg');
   background-size: 106%;
   background-position: 50% 48%;
+  z-index: 5;
 }
 
 .div-personal_info {
-  background-color: var(--rojo);
+  background-color: var(--azul);
   padding-top: 101px;
   height: 20px;
 }
@@ -78,12 +79,12 @@ h2 {
 .wave-container span {
   position: relative;
 
-  background-color: var(--rojo);
+  background-color: var(--azul);
 
   width: 15px;
   height: 15px;
 
-  box-shadow: 0 0 10px var(--rojo), 0 0 20px var(--rojo);
+  box-shadow: 0 0 10px var(--azul), 0 0 20px var(--azul);
 
   border-radius: 50%;
 
@@ -93,10 +94,20 @@ h2 {
   animation-duration: calc(125s / var(--i));
 }
 
+.wave-container span:nth-child(even){
+  background-color: var(--morado);
+  box-shadow: 0 0 10px var(--morado), 0 0 20px var(--morado);
+}
+
 @keyframes animate {
 
   0% {
-    top: 100%
+    top: 100%;
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
   }
 
   50% {

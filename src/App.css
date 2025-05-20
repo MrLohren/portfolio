@@ -18,7 +18,6 @@ button {
 body,
 p {
   font-family: 'Inter', sans-serif;
-  /* margin: 0; */
 }
 
 .div-header {
@@ -124,7 +123,7 @@ p {
   animation: chitchat linear both var(--btn-animation-duration);
 }
 
-.div-personal_info .normal {
+.normal {
   position: relative;
   padding: 10px 20px;
   border-radius: 7px;
@@ -142,7 +141,7 @@ p {
   transition: all 0.2s ease-in;
 }
 
-.div-personal_info .normal:hover {
+.normal:hover {
   background: rgb(61, 106, 255);
   box-shadow: 0 0 30px 5px var(--azul3);
   -webkit-transition: all 0.2s ease-out;
@@ -150,7 +149,7 @@ p {
   transition: all 0.2s ease-out;
 }
 
-.div-personal_info .normal:active {
+.normal:active {
   box-shadow: 0 0 0 0 transparent;
   -webkit-transition: box-shadow 0.2s ease-in;
   -moz-transition: box-shadow 0.2s ease-in;
@@ -222,17 +221,85 @@ p {
 }
 
 .div-projects {
+  position: relative;
   min-height: 200px;
-  padding-top: 100px;
-  background: linear-gradient(to bottom,
-      var(--azul) 0%,
-      var(--azul-transparente) 25%,
-      var(--blanco) 40%,
-      var(--blanco) 100%);
+  padding-top: 50px;
+  background: var(--azul)
+}
+
+.div-projects::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  margin-top: 52.5px;
+  height: calc(100% - 50px - 52.5px);
+  background-color: var(--azul3);
+}
+
+.div-projects * {
+  color: var(--blanco);
+}
+
+.div-projects span {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .div-projects h2 {
+  border: 1px solid var(--azul3);
+  padding: 10px 20px;
+  border-radius: 7px;
   text-align: center;
+}
+
+.div-project-single {
+  margin-block: 25px;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.div-project-single::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 25px;
+  height: 25px;
+
+  background-color: var(--azul);
+  border-radius: 50%;
+  border: 1px solid var(--azul3);
+}
+
+.div-project-single::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 15px;
+  height: 15px;
+
+  background-color: var(--azul3);
+  border-radius: 50%;
+}
+
+.div-project-single img {
+  width: 40%;
+  height: 40%;
+}
+
+.div-project-content {
+  width: 40%;
+}
+
+.div-project-single .div-button {
+  
 }
 
 @keyframes _blink {

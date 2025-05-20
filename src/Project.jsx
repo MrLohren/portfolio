@@ -1,8 +1,9 @@
-const Project = ({ inverted = 0 }) => {
+const Project = ({ inverted = 0, img, children }) => {
     return (
-        <>
-            test
-        </>
+        <div className="div-project-single">
+            <img src={img} alt="Imagen proyecto"/>
+            {children}
+        </div>
     )
 }
 

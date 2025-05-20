@@ -299,7 +299,7 @@ p {
 }
 
 .div-project-single .div-button {
-  
+  text-align: right;
 }
 
 @keyframes _blink {

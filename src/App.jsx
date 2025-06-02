@@ -1,5 +1,6 @@
 import Header from './Header'
 import Project from './Project'
+import Background_dots from './Background_dots'
 
 import './App.css'
 
@@ -10,6 +11,7 @@ import pytorch_logo from './assets/pytorch_logo.png'
 import react_logo from './assets/react_logo.png'
 
 import vodudahue from './assets/sch_vodudahue.png'
+import jpg_titulo from './assets/ceritficado_titulo.jpg'
 
 function App() {
 
@@ -24,7 +26,7 @@ function App() {
       </div>
 
       <div className='div-projects'>
-        <span className='div-projects-title'>
+        <span className='div-center-title'>
           <h2>Proyectos Hechos</h2>
         </span>
         <Project img={vodudahue}>
@@ -47,6 +49,23 @@ function App() {
             </div>
           </div>
         </Project>
+      </div>
+
+      <div id='div-datos_academicos' className='div-datos_academicos'>
+
+        <Background_dots />
+
+        <span className='div-center-title'>
+          <h1>Datos Académicos</h1>
+        </span>
+
+        <span className='div-center-title-titulo'>
+          <h2>Título Universitario</h2>
+        </span>
+
+        <div className='div-titulo-container'>
+          <img className='img-titulo' src={jpg_titulo} alt="imagen titulo" />
+        </div>
       </div>
     </>
   )

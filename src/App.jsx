@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+
 import Header from './Header'
 import Project from './Project'
 import Background_dots from './Background_dots'
@@ -17,18 +19,28 @@ import jpg_titulo from './assets/ceritficado_titulo.jpg'
 import linkedin_logo from './assets/linkedin.svg'
 import whatsapp_logo from './assets/whatsapp.svg'
 import instagram_logo from './assets/instagram.svg'
+import BotonTop from './BotonTop'
 
 function App() {
+
+  const datosRef = useRef(null);
+  const redesRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <>
       <Header />
 
+      <BotonTop />
+
       <div className='div-personal_info'>
 
         <div className='buttons'>
-          <button className='normal'>Datos académicos</button>
-          <button className='normal'>Redes sociales</button>
+          <button onClick={() => scrollToSection(datosRef)} className='normal'>Datos académicos</button>
+          <button onClick={() => scrollToSection(redesRef)} className='normal'>Redes sociales</button>
           <button className='playground'><span>Playground</span></button>
         </div>
 
@@ -89,7 +101,7 @@ function App() {
         </Project>
       </div>
 
-      <div id='div-datos_academicos' className='div-datos_academicos'>
+      <div ref={datosRef} id='div-datos_academicos' className='div-datos_academicos'>
 
         <Background_dots />
 
@@ -106,7 +118,7 @@ function App() {
         </div>
       </div>
 
-      <div className='div-redes-sociales'>
+      <div ref={redesRef} className='div-redes-sociales'>
 
         <span className='div-center-title'>
           <h1>Redes Sociales</h1>
@@ -125,7 +137,7 @@ function App() {
 
           <SocialCard image={whatsapp_logo}>
             <div>
-              <p>Si lo deseas, puedes contactacte directamente conmigo también!</p>
+              <p>Si lo deseas, puedes contactarte directamente conmigo también por <strong>WhatsApp</strong>!</p>
               <button
                 className='normal'
                 onClick={() => window.open('https://wa.me/56967084316', '_blank')}>Háblame por WhatsApp!
@@ -135,7 +147,7 @@ function App() {
 
           <SocialCard image={instagram_logo}>
             <div>
-              <p>Así como con mi WhatApp, si lo deseas, puedes hablarme por DM de Instagram!</p>
+              <p>Así como con mi WhatApp, si lo deseas, puedes hablarme por DM de <strong>Instagram</strong>!</p>
               <button
                 className='normal'
                 onClick={() => window.open('https://www.instagram.com/pipe.l.m/', '_blank')}>Envíame un DM!

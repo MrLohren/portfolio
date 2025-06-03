@@ -54,9 +54,42 @@ p {
   background-color: var(--azul);
   padding-top: 120px;
   padding-bottom: 30px;
+}
+
+.div-personal_info * {
+  color: var(--blanco);
+}
+
+.buttons {
   display: flex;
   justify-content: center;
   gap: 50px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro p {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.techs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 50px;
+  gap: 70px;
+}
+
+.techs img {
+  height: 100px;
+  width: auto;
 }
 
 .div-personal_info .playground {
@@ -222,8 +255,7 @@ p {
 
 .div-projects {
   position: relative;
-  min-height: 200px;
-  padding-block: 50px;
+  padding: 50px;
   background: var(--azul)
 }
 
@@ -401,6 +433,11 @@ p {
   background-color: var(--azul3);
 }
 
+.social-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
 .social-card-container {
   display: flex;
   position: relative;
@@ -419,6 +456,7 @@ p {
   padding: 10px 20px;
   text-align: center;
   width: 330px;
+  min-height: 155px;
 }
 
 .social-card-content img {

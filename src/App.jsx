@@ -5,11 +5,11 @@ import SocialCard from './SocialCard'
 
 import './App.css'
 
-import odoo_logo from './assets/odoo_logo.png'
-import psql_logo from './assets/psql_logo.png'
-import python_logo from './assets/python_logo.png'
-import pytorch_logo from './assets/pytorch_logo.png'
-import react_logo from './assets/react_logo.png'
+import odoo_logo from './assets/odoo_logo.svg'
+import psql_logo from './assets/psql_logo.svg'
+import python_logo from './assets/python_logo.svg'
+import pytorch_logo from './assets/pytorch_logo.svg'
+import react_logo from './assets/react_logo.svg'
 
 import vodudahue from './assets/sch_vodudahue.png'
 import jpg_titulo from './assets/ceritficado_titulo.jpg'
@@ -25,9 +25,42 @@ function App() {
       <Header />
 
       <div className='div-personal_info'>
-        <button className='normal'>Datos académicos</button>
-        <button className='normal'>Redes sociales</button>
-        <button className='playground'><span>Playground</span></button>
+
+        <div className='buttons'>
+          <button className='normal'>Datos académicos</button>
+          <button className='normal'>Redes sociales</button>
+          <button className='playground'><span>Playground</span></button>
+        </div>
+
+        <div className='intro'>
+          <p>
+            Soy Ingeniero Civil en Informática con experiencia en
+            desarrollo de front-end, back-end, microservicios y
+            redes neuronales de IA.
+          </p>
+          <p>
+            Tengo experiencia trabajando en áreas como la industria forestal,
+            trabajos de última milla con empresas de entregas de pedidos,
+            trabajos con cervecerías, cafeterías y restoranes.
+          </p>
+          <p>
+            Siempre buscando nuevos desafíos en rubros nuevos y nuevas tecnologías!
+            Estas son las tecnologías con las que he trabajado y domino: <strong>↓</strong>
+          </p>
+        </div>
+
+        <div className='techs'>
+          <img src={odoo_logo} alt="Odoo ERP" />
+          <img src={psql_logo} alt="PostreSQL" />
+          <img src={python_logo} alt="Python" />
+          <img src={pytorch_logo} alt="Pytorch" />
+          <img src={react_logo} alt="React.js" />
+        </div>
+
+        <div className='intro'>
+          <p>Y estos son unos de los proyectos en los que he trabajado! <strong>↓</strong></p>
+        </div>
+
       </div>
 
       <div className='div-projects'>
@@ -79,35 +112,38 @@ function App() {
           <h1>Redes Sociales</h1>
         </span>
 
-        <SocialCard image={linkedin_logo}>
-          <div>
-            <p>Conecta conmigo por <strong>LinkedIn</strong> para trabajar juntos!</p>
-            <button
-              className='normal'
-              onClick={() => window.open('https://www.linkedin.com/in/felipe-lagos-mart%C3%ADnez-b90922261/', '_blank')}>Visitar LinkedIn
-            </button>
-          </div>
-        </SocialCard>
+        <div className='social-cards'>
+          <SocialCard image={linkedin_logo}>
+            <div>
+              <p>Conecta conmigo por <strong>LinkedIn</strong> para trabajar juntos!</p>
+              <button
+                className='normal'
+                onClick={() => window.open('https://www.linkedin.com/in/felipe-lagos-mart%C3%ADnez-b90922261/', '_blank')}>Visitar LinkedIn
+              </button>
+            </div>
+          </SocialCard>
 
-        <SocialCard image={whatsapp_logo}>
-          <div>
-            <p>Si lo deseas, puedes contactacte directamente conmigo también!</p>
-            <button
-              className='normal'
-              onClick={() => window.open('https://wa.me/56967084316', '_blank')}>Háblame por WhatsApp!
-            </button>
-          </div>
-        </SocialCard>
+          <SocialCard image={whatsapp_logo}>
+            <div>
+              <p>Si lo deseas, puedes contactacte directamente conmigo también!</p>
+              <button
+                className='normal'
+                onClick={() => window.open('https://wa.me/56967084316', '_blank')}>Háblame por WhatsApp!
+              </button>
+            </div>
+          </SocialCard>
 
-        <SocialCard image={instagram_logo}>
-          <div>
-            <p>Así como con mi WhatApp, si lo deseas, puedes hablarme por DM de Instagram!</p>
-            <button
-              className='normal'
-              onClick={() => window.open('https://www.instagram.com/pipe.l.m/', '_blank')}>Envíame un DM!
-            </button>
-          </div>
-        </SocialCard>
+          <SocialCard image={instagram_logo}>
+            <div>
+              <p>Así como con mi WhatApp, si lo deseas, puedes hablarme por DM de Instagram!</p>
+              <button
+                className='normal'
+                onClick={() => window.open('https://www.instagram.com/pipe.l.m/', '_blank')}>Envíame un DM!
+              </button>
+            </div>
+          </SocialCard>
+        </div>
+
 
       </div>
     </>

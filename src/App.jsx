@@ -1,6 +1,7 @@
 import Header from './Header'
 import Project from './Project'
 import Background_dots from './Background_dots'
+import SocialCard from './SocialCard'
 
 import './App.css'
 
@@ -12,6 +13,10 @@ import react_logo from './assets/react_logo.png'
 
 import vodudahue from './assets/sch_vodudahue.png'
 import jpg_titulo from './assets/ceritficado_titulo.jpg'
+
+import linkedin_logo from './assets/linkedin.svg'
+import whatsapp_logo from './assets/whatsapp.svg'
+import instagram_logo from './assets/instagram.svg'
 
 function App() {
 
@@ -66,6 +71,44 @@ function App() {
         <div className='div-titulo-container'>
           <img className='img-titulo' src={jpg_titulo} alt="imagen titulo" />
         </div>
+      </div>
+
+      <div className='div-redes-sociales'>
+
+        <span className='div-center-title'>
+          <h1>Redes Sociales</h1>
+        </span>
+
+        <SocialCard image={linkedin_logo}>
+          <div>
+            <p>Conecta conmigo por <strong>LinkedIn</strong> para trabajar juntos!</p>
+            <button
+              className='normal'
+              onClick={() => window.open('https://www.linkedin.com/in/felipe-lagos-mart%C3%ADnez-b90922261/', '_blank')}>Visitar LinkedIn
+            </button>
+          </div>
+        </SocialCard>
+
+        <SocialCard image={whatsapp_logo}>
+          <div>
+            <p>Si lo deseas, puedes contactacte directamente conmigo también!</p>
+            <button
+              className='normal'
+              onClick={() => window.open('https://wa.me/56967084316', '_blank')}>Háblame por WhatsApp!
+            </button>
+          </div>
+        </SocialCard>
+
+        <SocialCard image={instagram_logo}>
+          <div>
+            <p>Así como con mi WhatApp, si lo deseas, puedes hablarme por DM de Instagram!</p>
+            <button
+              className='normal'
+              onClick={() => window.open('https://www.instagram.com/pipe.l.m/', '_blank')}>Envíame un DM!
+            </button>
+          </div>
+        </SocialCard>
+
       </div>
     </>
   )

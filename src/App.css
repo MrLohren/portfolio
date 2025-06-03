@@ -237,7 +237,8 @@ p {
   background-color: var(--azul3);
 }
 
-.div-projects * {
+.div-projects *,
+.div-redes-sociales * {
   color: var(--blanco);
 }
 
@@ -262,6 +263,7 @@ p {
 .div-datos_academicos h1,
 .div-datos_academicos h2 {
   background-color: var(--blanco);
+  z-index: 2;
 }
 
 
@@ -322,6 +324,16 @@ p {
       var(--blanco) 60px, var(--blanco) 100%);
 }
 
+.div-datos_academicos ::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  margin-top: 52.5px;
+  height: calc(100% - 50px - -17px);
+  background-color: var(--azul3);
+}
+
 .div-center-title-titulo {
   margin-top: 20px;
 }
@@ -335,9 +347,10 @@ p {
 }
 
 .img-titulo {
-  width: 55%;
+  width: 45%;
   border: 1px solid var(--azul3);
   border-radius: 7px;
+  z-index: 2;
 }
 
 .dots_container {
@@ -361,6 +374,55 @@ p {
   box-shadow: 0 0 10px var(--azul), 0 0 20px var(--azul);
 
   left: calc(100% - var(--i));
+}
+
+.div-redes-sociales {
+  background: linear-gradient(to bottom,
+      var(--blanco) 0%,
+      var(--azul-transparente) 15px,
+      var(--azul) 80px,
+      var(--azul) 100%);
+  padding-top: 110px;
+}
+
+.div-redes-sociales h1 {
+  border: 1px solid var(--azul3);
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+
+.div-redes-sociales::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  margin-top: -190px;
+  height: 190px;
+  background-color: var(--azul3);
+}
+
+.social-card-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid var(--azul3);
+  border-radius: 7px;
+  margin-block: 15px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 330px;
+}
+
+.social-card-content img {
+  width: 100px;
 }
 
 @keyframes _blink {

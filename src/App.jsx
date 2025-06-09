@@ -12,6 +12,7 @@ import psql_logo from './assets/psql_logo.svg'
 import python_logo from './assets/python_logo.svg'
 import pytorch_logo from './assets/pytorch_logo.svg'
 import react_logo from './assets/react_logo.svg'
+import php_logo from './assets/php_logo.svg'
 
 import vodudahue from './assets/sch_vodudahue.png'
 import jpg_titulo from './assets/ceritficado_titulo.jpg'
@@ -67,6 +68,7 @@ function App() {
           <img src={python_logo} alt="Python" />
           <img src={pytorch_logo} alt="Pytorch" />
           <img src={react_logo} alt="React.js" />
+          <img src={php_logo} alt="PHP" />
         </div>
 
         <div className='intro'>
